@@ -3,7 +3,7 @@ $(document).ready(function(){
     $('#form_usuario').submit(function(e){
         //preventDefault() evita que el formulario se envíe por defecto, ya que primero validaremos.
         e.preventDefault();
-        console.log('Llegué!');
+        
         var username = $("#txt_username").val();
         var email = $("#txt_email").val();
         var password = $("#txt_password").val();
@@ -48,6 +48,9 @@ $(document).ready(function(){
             alert("Persona no puede ser menor de 18 años");
             return false;
         }
+
+        alert("usuario creado con éxito, por favor inice sesión");
+        $(location).prop('href', '/login');
 
     });
 
