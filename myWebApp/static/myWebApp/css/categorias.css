@@ -5,13 +5,13 @@
 
 /*Estilos para el cuerpo*/
 .categoria-terror {
-    background-image: url("/imagenes/juegosdeterror.gif");
+    background-image: url("{% static 'myWebApp/imagenes/juegosdeterror.gif' %}");
     background-size: cover; 
     background-position: center; 
 }
 
 .categoria-accion {
-    background-image: url("/imagenes/gif-accion.webp");
+    background-image: url("static/myWebApp/imagenes/gif-accion.webp");
     background-size: cover; 
     background-position: center; 
 }
