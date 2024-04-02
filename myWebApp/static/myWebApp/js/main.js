@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    $('.container').load('./html/home.html');
+    $('.container').load('./static/myWebApp/html/home.html');
 
     // Función que cargará páginas dinamicamente en el div container en vez de redireccionar
     $("#menu a, #menu .logo").click(function(e){
@@ -11,12 +11,12 @@ $(document).ready(function(){
         
         var href_seleccionado = e.target.href
 
-        // Si la URL contiene main.html, hacemos un redirect a main.html
-        if (isImgLogoClicked($(this)) || href_seleccionado.includes("main.html") || href_seleccionado.includes("#")){
-            $(location).attr("href", "./main.html") // REDIRECT a la página main.html
+        // Si la URL contiene "main", hacemos un redirect a /main
+        if (isImgLogoClicked($(this)) || href_seleccionado.includes("main") || href_seleccionado.includes("#")){
+            $(location).attr("href", "./main") // REDIRECT a la página main
             return false;
-        } else if (href_seleccionado.includes("login.html")) {
-            $(location).attr("href", "./login.html") // REDIRECT a la página login.html
+        } else if (href_seleccionado.includes("login")) {
+            $(location).attr("href", "./login") // REDIRECT a la página /login
             return false;
         } else {
             // Aquí cargamos dinamicamente el valor del atributo href del link

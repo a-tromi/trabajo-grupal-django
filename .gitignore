@@ -1,0 +1,4 @@
+# Aquí se ignoran archivos basura que no son necesarios para el proyecto
+
+# Archivo basura que genera macos x
+.DS_Store
